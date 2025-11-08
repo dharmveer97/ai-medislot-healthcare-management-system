@@ -2,6 +2,29 @@ import { type NextRequest, NextResponse } from "next/server";
 import { getToken } from "next-auth/jwt";
 import { guestRegex, isDevelopmentEnvironment } from "./lib/constants";
 
+// Public routes that don't require authentication
+const publicRoutes = [
+  "/",
+  "/doctors",
+  "/about",
+  "/contact",
+  "/blog",
+  "/how-it-works",
+  "/emergency",
+  "/health-assistant",
+  "/login",
+  "/register",
+  "/forgot-password",
+  "/verify-otp",
+  "/pricing",
+  "/careers",
+  "/press",
+  "/privacy",
+  "/terms",
+  "/cookies",
+  "/hipaa",
+];
+
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
@@ -14,6 +37,11 @@ export async function middleware(request: NextRequest) {
   }
 
   if (pathname.startsWith("/api/auth")) {
+    return NextResponse.next();
+  }
+
+  // Allow public routes without authentication
+  if (publicRoutes.includes(pathname) || pathname.startsWith("/doctors/")) {
     return NextResponse.next();
   }
 
