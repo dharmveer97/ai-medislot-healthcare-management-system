@@ -15,6 +15,7 @@ export default async function Layout({
   const [session, cookieStore] = await Promise.all([auth(), cookies()]);
   const isCollapsed = cookieStore.get("sidebar_state")?.value !== "true";
 
+  // Don't show sidebar on landing page - just render children directly
   return (
     <>
       <Script
