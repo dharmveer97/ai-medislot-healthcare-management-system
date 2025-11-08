@@ -1,6 +1,7 @@
 # MediSlot - Comprehensive Feature Specification
 
 ## Project Overview
+
 MediSlot is a next-generation healthcare appointment booking platform designed for Jalandhar and beyond. It bridges the gap between traditional phone-based bookings and modern digital healthcare management.
 
 ---
@@ -8,9 +9,11 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 ## Core Features
 
 ### 1. Multi-Role Authentication System
+
 **Who:** Patients, Doctors, Clinics, Admins
 
 **Features:**
+
 - Email/Password authentication
 - Phone OTP verification
 - Google OAuth integration
@@ -25,6 +28,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 ### 2. Smart Doctor Discovery & Search
 
 **Features:**
+
 - **Advanced Search Filters:**
   - Specialty (Cardiologist, Dermatologist, Pediatrician, etc.)
   - Location (within 5km, 10km, 20km radius)
@@ -54,6 +58,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 ### 3. Intelligent Appointment Booking System
 
 **Features:**
+
 - **Calendar Management:**
   - Real-time availability checking
   - Color-coded time slots (Available, Booked, Break)
@@ -85,6 +90,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 ### 4. AI-Powered Health Assistant
 
 **Features:**
+
 - **Symptom Checker:**
   - Natural language chat interface
   - AI analyzes symptoms and suggests specialists
@@ -107,6 +113,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 ### 5. Patient Dashboard
 
 **Sections:**
+
 - **My Appointments:**
   - Upcoming appointments (with countdown)
   - Past appointments history
@@ -148,6 +155,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 ### 6. Doctor Dashboard
 
 **Sections:**
+
 - **Schedule Management:**
   - Weekly/Monthly calendar view
   - Set available hours for each day
@@ -198,6 +206,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 ### 7. Clinic/Multi-Doctor Management
 
 **Features:**
+
 - Register multiple doctors under one clinic
 - Unified calendar for clinic
 - Staff management (receptionists)
@@ -210,6 +219,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 ### 8. Emergency Services Directory
 
 **Features:**
+
 - **Quick Access:**
   - Ambulance services with phone numbers
   - 24/7 emergency hospitals list
@@ -233,12 +243,14 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 ### 9. Smart Notifications & Reminders
 
 **Channels:**
+
 - In-app notifications
 - Email notifications
 - SMS notifications
 - WhatsApp notifications (Business API)
 
 **Types:**
+
 - Appointment confirmation
 - 24-hour reminder
 - 1-hour reminder
@@ -249,6 +261,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 - Promotional offers (opt-in)
 
 **User Control:**
+
 - Customize notification preferences
 - Quiet hours setting
 - Channel preference selection
@@ -258,6 +271,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 ### 10. Payment & Billing System
 
 **Features:**
+
 - **Payment Methods:**
   - UPI (Google Pay, PhonePe, Paytm)
   - Credit/Debit cards
@@ -282,6 +296,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 ### 11. Reviews & Ratings System
 
 **Features:**
+
 - 5-star rating system
 - Written reviews with photos
 - Verified patient badge (booked through platform)
@@ -297,6 +312,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 ### 12. Admin Panel
 
 **Features:**
+
 - **Dashboard:**
   - Total users (patients/doctors)
   - Active appointments
@@ -332,6 +348,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 ## Advanced Features
 
 ### 13. Telemedicine Integration
+
 - In-app video consultations (using WebRTC or third-party)
 - Audio-only consultations
 - Screen sharing for reports
@@ -340,6 +357,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 - Prescription after video call
 
 ### 14. Health Content & Blog
+
 - Educational articles on health topics
 - Doctor-contributed content
 - Seasonal health tips
@@ -348,24 +366,28 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 - Video content
 
 ### 15. Referral System
+
 - Refer friends and earn credits
 - Doctor referral bonuses
 - Shareable referral links
 - Track referral earnings
 
 ### 16. Insurance Integration
+
 - Upload insurance details
 - Check coverage
 - Cashless claims support
 - Insurance provider partnerships
 
 ### 17. Multilingual Support
+
 - English, Hindi, Punjabi
 - RTL support if needed
 - Language switcher
 - Translated content
 
 ### 18. Accessibility Features
+
 - Screen reader support
 - High contrast mode
 - Text size adjustment
@@ -373,6 +395,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 - Voice commands (future)
 
 ### 19. Analytics & Reporting
+
 - Patient behavior analytics
 - Doctor performance metrics
 - Revenue forecasting
@@ -380,6 +403,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 - A/B testing framework
 
 ### 20. Progressive Web App (PWA)
+
 - Installable on mobile
 - Offline mode for viewing appointments
 - Push notifications
@@ -390,6 +414,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 ## Technical Architecture
 
 ### Frontend
+
 - **Framework:** Next.js 15 (App Router)
 - **Language:** TypeScript
 - **Styling:** TailwindCSS 4 + Custom theme
@@ -402,6 +427,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 - **Charts:** Recharts / Chart.js
 
 ### Backend
+
 - **Runtime:** Next.js API Routes (Edge functions)
 - **Database:** PostgreSQL (local/Vercel Postgres)
 - **ORM:** Drizzle ORM
@@ -411,6 +437,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 - **Caching:** Redis (optional)
 
 ### Integrations
+
 - **Payments:** Razorpay / Stripe
 - **SMS:** Twilio / MSG91
 - **Email:** Resend / SendGrid
@@ -419,6 +446,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 - **Video:** Agora / Daily.co
 
 ### Security
+
 - HTTPS only
 - JWT tokens
 - Rate limiting
@@ -430,6 +458,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 - Regular security audits
 
 ### Performance
+
 - Server-side rendering (SSR)
 - Static generation where possible
 - Image optimization
@@ -444,6 +473,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 ## Pages Structure
 
 ### Public Pages
+
 1. **Landing Page** `/`
    - Hero section with search
    - Features showcase
@@ -476,12 +506,14 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 8. **How It Works** `/how-it-works`
 
 ### Auth Pages
+
 9. **Login** `/login`
 10. **Register** `/register` (with role selection)
 11. **Forgot Password** `/forgot-password`
 12. **Verify OTP** `/verify-otp`
 
 ### Patient Pages (Protected)
+
 13. **Patient Dashboard** `/dashboard`
 14. **Book Appointment** `/book-appointment/[doctorId]`
 15. **My Appointments** `/appointments`
@@ -492,6 +524,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 20. **AI Health Assistant** `/health-assistant`
 
 ### Doctor Pages (Protected)
+
 21. **Doctor Dashboard** `/doctor/dashboard`
 22. **Manage Schedule** `/doctor/schedule`
 23. **Appointments** `/doctor/appointments`
@@ -502,6 +535,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 28. **Profile Settings** `/doctor/settings`
 
 ### Admin Pages (Protected)
+
 29. **Admin Dashboard** `/admin`
 30. **User Management** `/admin/users`
 31. **Doctor Verification** `/admin/doctors/verify`
@@ -532,6 +566,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 ## Unique Design Elements
 
 ### Theme
+
 - **Primary Color:** Medical blue (#0066CC) with gradient
 - **Accent:** Teal (#00B8A9) for CTAs
 - **Success:** Green (#06D6A0)
@@ -540,11 +575,13 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 - **Neutral:** Gray scale with warm tones
 
 ### Typography
+
 - **Headings:** Geist Sans (bold, modern)
 - **Body:** Geist Sans (regular)
 - **Monospace:** Geist Mono (for IDs, codes)
 
 ### Animations (Framer Motion)
+
 - Page transitions (fade + slide)
 - Card hover effects (lift + shadow)
 - Button interactions (scale + shimmer)
@@ -557,6 +594,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 - Modal enter/exit animations
 
 ### Components
+
 - Glassmorphism cards
 - Neumorphic buttons (optional)
 - Gradient backgrounds
@@ -571,6 +609,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 ## MVP Priority (2-3 Weeks)
 
 **Week 1:**
+
 - Database schema setup
 - Authentication (patients + doctors)
 - Basic homepage
@@ -579,6 +618,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 - Appointment booking flow
 
 **Week 2:**
+
 - Patient dashboard
 - Doctor dashboard
 - Appointment management
@@ -587,6 +627,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 - AI health assistant (basic)
 
 **Week 3:**
+
 - Digital prescriptions
 - Medical records upload
 - Emergency directory
@@ -595,6 +636,7 @@ MediSlot is a next-generation healthcare appointment booking platform designed f
 - Testing & bug fixes
 
 **Post-MVP:**
+
 - Telemedicine
 - WhatsApp notifications
 - Admin panel v2
