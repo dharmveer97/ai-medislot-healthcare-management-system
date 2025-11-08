@@ -7,9 +7,9 @@ import "./globals.css";
 import { SessionProvider } from "next-auth/react";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://chat.vercel.ai"),
-  title: "Next.js Chatbot Template",
-  description: "Next.js chatbot template using the AI SDK.",
+  metadataBase: new URL("https://medislot.com"),
+  title: "MediSlot - Smart Healthcare Appointment Booking for Jalandhar",
+  description: "Book doctor appointments instantly with MediSlot. Find verified doctors, check availability, and manage your healthcare appointments in Jalandhar. AI-powered symptom checker included.",
 };
 
 export const viewport = {
