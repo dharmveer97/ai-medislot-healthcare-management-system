@@ -53,22 +53,32 @@ export async function getUser(email: string): Promise<User[]> {
   }
 }
 
-export async function createUser(email: string, password: string) {
+export async function createUser(email: string, password: string, fullName?: string) {
   const hashedPassword = generateHashedPassword(password);
 
   try {
-    return await db.insert(user).values({ email, password: hashedPassword });
+    return await db.insert(user).values({
+      email,
+      password: hashedPassword,
+      fullName: fullName || email.split('@')[0] || 'User'
+    });
   } catch (_error) {
     throw new ChatSDKError("bad_request:database", "Failed to create user");
   }
 }
 
 export async function createGuestUser() {
-  const email = `guest-${Date.now()}`;
+  const timestamp = Date.now();
+  const email = `guest-${timestamp}@medislot.local`;
   const password = generateHashedPassword(generateUUID());
+  const fullName = `Guest ${timestamp}`;
 
   try {
-    return await db.insert(user).values({ email, password }).returning({
+    return await db.insert(user).values({
+      email,
+      password,
+      fullName
+    }).returning({
       id: user.id,
       email: user.email,
     });
